@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kally_dish/generated/l10n.dart';
+import 'package:kally_dish/ui/extensions/extension.dart';
 import 'package:stacked/stacked.dart';
 import 'package:kally_dish/ui/common/app_colors.dart';
 import 'package:kally_dish/ui/common/ui_helpers.dart';
@@ -16,6 +18,16 @@ class HomeView extends StackedView<HomeViewModel> {
     Widget? child,
   ) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: kcBackgroundColor,
+        elevation: 0,
+        title: Text(
+          S.current.home,
+          style: context.typography?.titleBold16?.copyWith(
+            color: context.pallete?.gray1,
+          ),
+        ),
+      ),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 25.0),
@@ -27,6 +39,7 @@ class HomeView extends StackedView<HomeViewModel> {
                 verticalSpaceLarge,
                 Column(
                   children: [
+                    SizedBox(height: 18.h),
                     Text(
                       S.current.home,
                       style: const TextStyle(

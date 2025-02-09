@@ -29,7 +29,7 @@ class LoginView extends StackedView<LoginViewModel> with $LoginView {
     Widget? child,
   ) {
     return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.background,
+      backgroundColor: Theme.of(context).colorScheme.surface,
       body: OverlayLoader(
         isBusy: viewModel.isBusy,
         content: SafeArea(
@@ -119,12 +119,11 @@ class LoginView extends StackedView<LoginViewModel> with $LoginView {
                     buttonText: S.current.login,
                     color: loginEmailController.text.isEmpty ||
                             loginPasswordController.text.isEmpty
-                        ? context.pallete?.primary6?.withOpacity(0.2)
+                        ? context.pallete?.primary6?.withAlpha(50)
                         : context.pallete?.primary6,
                     onTap: () {
                       if (_loginFormKey.currentState?.validate() == false) {
-                        debugPrint(
-                            'ahan, pls is authentication a joke to you ?!');
+                        debugPrint('Authentication logic');
 
                         viewModel.showLoginSnackBar(
                           viewModel.loginEmailValidatorValue ??
@@ -132,6 +131,8 @@ class LoginView extends StackedView<LoginViewModel> with $LoginView {
                         );
                       } else {
                         viewModel.login();
+                        FocusScope.of(context)
+                            .unfocus(); //close keyboard on android
                       }
                     },
                   ),
@@ -187,7 +188,7 @@ class LoginView extends StackedView<LoginViewModel> with $LoginView {
 
   @override
   void onDispose(LoginViewModel viewModel) {
-    debugPrint('LoginForm onDispose called');
+    debugPrint('Login Form onDispose called');
     disposeForm();
     super.onDispose(viewModel);
   }

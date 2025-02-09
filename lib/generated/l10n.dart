@@ -18,8 +18,10 @@ class S {
   static S? _current;
 
   static S get current {
-    assert(_current != null,
-        'No instance of S was loaded. Try to initialize the S delegate before accessing S.current.');
+    assert(
+      _current != null,
+      'No instance of S was loaded. Try to initialize the S delegate before accessing S.current.',
+    );
     return _current!;
   }
 
@@ -41,8 +43,10 @@ class S {
 
   static S of(BuildContext context) {
     final instance = S.maybeOf(context);
-    assert(instance != null,
-        'No instance of S present in the widget tree. Did you add S.delegate in localizationsDelegates?');
+    assert(
+      instance != null,
+      'No instance of S present in the widget tree. Did you add S.delegate in localizationsDelegates?',
+    );
     return instance!;
   }
 
@@ -52,22 +56,12 @@ class S {
 
   /// `Hello World`
   String get hello_word {
-    return Intl.message(
-      'Hello World',
-      name: 'hello_word',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Hello World', name: 'hello_word', desc: '', args: []);
   }
 
   /// `Get Started`
   String get get_started {
-    return Intl.message(
-      'Get Started',
-      name: 'get_started',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Get Started', name: 'get_started', desc: '', args: []);
   }
 
   /// `Quality Free Delivery`
@@ -132,22 +126,12 @@ class S {
 
   /// `Welcome`
   String get welcome {
-    return Intl.message(
-      'Welcome',
-      name: 'welcome',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Welcome', name: 'welcome', desc: '', args: []);
   }
 
   /// `My Dish`
   String get mydish {
-    return Intl.message(
-      'My Dish',
-      name: 'mydish',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('My Dish', name: 'mydish', desc: '', args: []);
   }
 
   /// `Please sign in to continue`
@@ -182,12 +166,7 @@ class S {
 
   /// `Password`
   String get password {
-    return Intl.message(
-      'Password',
-      name: 'password',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Password', name: 'password', desc: '', args: []);
   }
 
   /// `Enter your password`
@@ -202,12 +181,7 @@ class S {
 
   /// `First Name`
   String get first_name {
-    return Intl.message(
-      'First Name',
-      name: 'first_name',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('First Name', name: 'first_name', desc: '', args: []);
   }
 
   /// `Enter your first name`
@@ -222,12 +196,7 @@ class S {
 
   /// `Last name`
   String get last_name {
-    return Intl.message(
-      'Last name',
-      name: 'last_name',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Last name', name: 'last_name', desc: '', args: []);
   }
 
   /// `Enter your last name`
@@ -242,12 +211,7 @@ class S {
 
   /// `Login`
   String get login {
-    return Intl.message(
-      'Login',
-      name: 'login',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Login', name: 'login', desc: '', args: []);
   }
 
   /// `Don’t have an account?`
@@ -272,22 +236,12 @@ class S {
 
   /// `Register`
   String get register {
-    return Intl.message(
-      'Register',
-      name: 'register',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Register', name: 'register', desc: '', args: []);
   }
 
   /// `Sign Up`
   String get sign_up {
-    return Intl.message(
-      'Sign Up',
-      name: 'sign_up',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Sign Up', name: 'sign_up', desc: '', args: []);
   }
 
   /// `Kindly fill the form to create a Kally Dish account`
@@ -322,12 +276,7 @@ class S {
 
   /// `Required`
   String get required {
-    return Intl.message(
-      'Required',
-      name: 'required',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Required', name: 'required', desc: '', args: []);
   }
 
   /// `First name is required`
@@ -442,12 +391,7 @@ class S {
 
   /// `Proceed`
   String get proceed {
-    return Intl.message(
-      'Proceed',
-      name: 'proceed',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Proceed', name: 'proceed', desc: '', args: []);
   }
 
   /// `Kindly edit the details below to the reflect the right standard dish information`
@@ -462,12 +406,7 @@ class S {
 
   /// `Edit Dish`
   String get edit_dish {
-    return Intl.message(
-      'Edit Dish',
-      name: 'edit_dish',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Edit Dish', name: 'edit_dish', desc: '', args: []);
   }
 
   /// `Name of Dish`
@@ -492,12 +431,7 @@ class S {
 
   /// `Ingredients`
   String get ingredients {
-    return Intl.message(
-      'Ingredients',
-      name: 'ingredients',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Ingredients', name: 'ingredients', desc: '', args: []);
   }
 
   /// `Click "Done" after your input.`
@@ -512,12 +446,7 @@ class S {
 
   /// `Name: `
   String get name {
-    return Intl.message(
-      'Name: ',
-      name: 'name',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Name: ', name: 'name', desc: '', args: []);
   }
 
   /// `Date Created: `
@@ -532,22 +461,12 @@ class S {
 
   /// `Cancel`
   String get cancel {
-    return Intl.message(
-      'Cancel',
-      name: 'cancel',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Cancel', name: 'cancel', desc: '', args: []);
   }
 
   /// `Yes`
   String get yes {
-    return Intl.message(
-      'Yes',
-      name: 'yes',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Yes', name: 'yes', desc: '', args: []);
   }
 
   /// `Are you sure you want to delete this dish?`
@@ -562,12 +481,7 @@ class S {
 
   /// `Delete Dish`
   String get delete_dish {
-    return Intl.message(
-      'Delete Dish',
-      name: 'delete_dish',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Delete Dish', name: 'delete_dish', desc: '', args: []);
   }
 
   /// `Create a Dish`
@@ -602,12 +516,7 @@ class S {
 
   /// `Create Dish`
   String get create_dish {
-    return Intl.message(
-      'Create Dish',
-      name: 'create_dish',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Create Dish', name: 'create_dish', desc: '', args: []);
   }
 
   /// `No Internet Connection. Please try again later`
@@ -652,62 +561,32 @@ class S {
 
   /// `Home`
   String get home {
-    return Intl.message(
-      'Home',
-      name: 'home',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Home', name: 'home', desc: '', args: []);
   }
 
   /// `HOME`
   String get drawer_home {
-    return Intl.message(
-      'HOME',
-      name: 'drawer_home',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('HOME', name: 'drawer_home', desc: '', args: []);
   }
 
   /// `Hi`
   String get hi {
-    return Intl.message(
-      'Hi',
-      name: 'hi',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Hi', name: 'hi', desc: '', args: []);
   }
 
   /// `MY DISH`
   String get my_dish {
-    return Intl.message(
-      'MY DISH',
-      name: 'my_dish',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('MY DISH', name: 'my_dish', desc: '', args: []);
   }
 
   /// `DARK MODE`
   String get dark_mode {
-    return Intl.message(
-      'DARK MODE',
-      name: 'dark_mode',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('DARK MODE', name: 'dark_mode', desc: '', args: []);
   }
 
   /// `LOGOUT `
   String get logout {
-    return Intl.message(
-      'LOGOUT ',
-      name: 'logout',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('LOGOUT ', name: 'logout', desc: '', args: []);
   }
 
   /// `There are no available dish to view currently`
@@ -745,9 +624,7 @@ class AppLocalizationDelegate extends LocalizationsDelegate<S> {
   const AppLocalizationDelegate();
 
   List<Locale> get supportedLocales {
-    return const <Locale>[
-      Locale.fromSubtags(languageCode: 'en'),
-    ];
+    return const <Locale>[Locale.fromSubtags(languageCode: 'en')];
   }
 
   @override

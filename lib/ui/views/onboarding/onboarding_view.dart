@@ -72,7 +72,7 @@ class OnboardingView extends StackedView<OnboardingViewModel> {
               dotsCount: viewModel.onboardingData.length,
               position: viewModel.currentIndex,
               decorator: DotsDecorator(
-                color: context.theme.primaryColor.withOpacity(0.1),
+                color: context.theme.primaryColor.withAlpha(50),
                 activeColor: context.theme.primaryColor,
                 size: Size(20.w, 3.h),
                 activeSize: Size(20.w, 3.h),

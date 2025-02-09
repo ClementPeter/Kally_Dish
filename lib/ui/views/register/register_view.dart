@@ -33,7 +33,7 @@ class RegisterView extends StackedView<RegisterViewModel> with $RegisterView {
     Widget? child,
   ) {
     return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.background,
+      backgroundColor: Theme.of(context).colorScheme.surface,
       body: OverlayLoader(
         isBusy: viewModel.isBusy,
         content: SafeArea(
@@ -115,9 +115,7 @@ class RegisterView extends StackedView<RegisterViewModel> with $RegisterView {
                           focusNode: registerEmailFocusNode,
                           validator: (value) {
                             return viewModel.registerEmailValidatorValue =
-                                Validation.validateEmail(
-                              value,
-                            );
+                                Validation.validateEmail(value);
                           },
                           autofillHints: const [AutofillHints.email],
                           keyboardType: TextInputType.emailAddress,
@@ -169,7 +167,7 @@ class RegisterView extends StackedView<RegisterViewModel> with $RegisterView {
                             lastNameController.text.isEmpty ||
                             registerEmailController.text.isEmpty ||
                             registerPasswordController.text.isEmpty
-                        ? context.pallete?.primary6?.withOpacity(0.2)
+                        ? context.pallete?.primary6?.withAlpha(50)
                         : context.pallete?.primary6,
                     onTap: () {
                       if (_registerFormKey.currentState?.validate() == false) {
@@ -183,6 +181,8 @@ class RegisterView extends StackedView<RegisterViewModel> with $RegisterView {
                         );
                       } else {
                         viewModel.register();
+                        FocusScope.of(context)
+                            .unfocus(); //close keyboard on android
                       }
                     },
                   ),

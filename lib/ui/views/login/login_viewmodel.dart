@@ -37,5 +37,7 @@ class LoginViewModel extends FormViewModel {
     await Future.delayed(const Duration(milliseconds: 1500));
     setBusy(false);
     debugPrint('Login');
+    _navigationService.replaceWithHomeView();
+    debugPrint('replaceWithHomeView');
   }
 }

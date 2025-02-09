@@ -17,7 +17,7 @@ class RegisterSuccessView extends StackedView<RegisterSuccessViewModel> {
     Widget? child,
   ) {
     return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.background,
+      backgroundColor: Theme.of(context).colorScheme.surface,
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
@@ -29,7 +29,6 @@ class RegisterSuccessView extends StackedView<RegisterSuccessViewModel> {
               alignment: Alignment.center,
               child: Column(
                 mainAxisSize: MainAxisSize.min,
-                // mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Text(
                     '🎉',
