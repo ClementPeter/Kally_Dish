@@ -7,4 +7,5 @@ class AppImages {
   static String onboardingImageTwo = 'assets/svg/onboard_image_two.svg';
   static String onboardingImageThree = 'assets/svg/onboard_image_three.svg';
   static String cancel = 'assets/svg/cancel.svg';
+  static String home = 'assets/svg/home_burger_menu.svg';
 }
